@@ -25,5 +25,5 @@ print('\n')
 
 # criando um dicionário com classe 
 # obs - não é muito usado
-pessoa2 = dict(nome='Stephanie')
-print(pessoa2, type(pessoa2))
+fruta = dict(nome='Manga')
+print(fruta, type(fruta))

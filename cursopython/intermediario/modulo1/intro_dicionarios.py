@@ -27,3 +27,22 @@ print('\n')
 # obs - não é muito usado
 fruta = dict(nome='Manga')
 print(fruta, type(fruta))
+
+
+nome = {}
+nome['nome'] = 'Stephanie'
+print(nome)
+
+
+# apagando uma chave
+time = {}
+time['time1'] = 'Corintians'
+time['time2'] = 'Barcelona'
+
+del time['time1']
+print(time)
+
+if time.get('time') is None:
+    print('Não existe')
+else:
+    print(time['time'])

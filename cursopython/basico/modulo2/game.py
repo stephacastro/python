@@ -7,7 +7,7 @@ def jogar():
     palavra_secreta = carrega_palavra()
     letras_acertadas = inicializa_letras_acertadas(palavra_secreta)
    
-   
+# Condições para o jogo acontecer   
     enforcou = False
     acertou = False
     erros = 0

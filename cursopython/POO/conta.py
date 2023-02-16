@@ -9,10 +9,19 @@ class Conta:
         self.titular = titular
         self.saldo = saldo
         self.limite = limite
+    
+    def extrato(self):
+        print(f'Saldo de {self.saldo} do titular {self.titular}')
+
+    def deposita(self, valor):
+        self.saldo += valor
+
+    def saca(self, valor):
+        self.saldo -= valor
 
 
 conta = Conta(152, 'Stephanie', 173.5, 1000.0)
-conta2 = Conta(672, 'Mario', 73.0, 1000.0)
-conta3 = Conta(3, "Manu", 0.0, 2000.0)
+conta2 = Conta(176, 'Manu', 90.0, 2000.0)
 
-print(conta.titular, conta.saldo)
+# chamando o objeto e acessando a função
+conta.extrato()

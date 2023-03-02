@@ -15,3 +15,10 @@ p1 = Pessoa('Stephanie', 25)
 
 print(Pessoa.ano_atual)
 print(p1.ano_nascimento())
+
+
+# __dict__ retem os valores dos objetos 
+print(p1.__dict__)
+# chama o dict
+print(vars(p1))
+

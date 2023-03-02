@@ -16,9 +16,18 @@ class Conta:
     def deposita(self, valor):
         self.__saldo += valor
 
+    def transfere(self, valor, destino):
+        self.saca(valor)
+        destino.deposita(valor)
+
     def saca(self, valor):
         self.__saldo -= valor
-
+    
+    def get_saldo(self):
+        return self.__saldo
+    
+    def set_limite(self):
+        return self.__limite
 
 conta = Conta(152, 'Stephanie', 173.5, 1000.0)
 conta2 = Conta(176, 'Manu', 90.0, 2000.0)
@@ -28,3 +37,5 @@ conta._Conta__saldo
 
 # chamando o objeto e acessando a função 
 conta2.extrato()
+
+conta.saldo()

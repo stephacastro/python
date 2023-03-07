@@ -23,7 +23,8 @@ class Conta:
     def saca(self, valor):
         self.__saldo -= valor
     
-    def get_saldo(self):
+    @property
+    def saldo(self):
         return self.__saldo
     
     def set_limite(self):

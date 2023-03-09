@@ -19,31 +19,39 @@ class Programa:
     @nome.setter
     def nome(self, novo_nome):
         self._nome = novo_nome.title()
+    
+    def __str__(self):
+        return f'{self._nome} / {self.ano} / {self._likes} likes'
 
 
 class Filme(Programa): # herdando atributos da classe programa
     
     def __init__(self, nome, ano, duracao):
-        self._nome = nome.title() 
-        self.ano = ano
+        super().__init__(nome, ano) # super acessa atributos da classe mae
         self.duracao = duracao
-        self._likes = 0
+
+    def __str__(self):
+        return f'{self._nome} / {self.ano} / {self.duracao} min / {self._likes} likes'
+        
 
 class Serie(Programa):
 
     def __init__(self, nome, ano, temporada):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano)
         self.temporada = temporada
-        self._likes = 0
 
+    def __str__(self):
+        return f'{self._nome} / {self.ano} / {self.temporada} temporadas / {self._likes} likes'
+       
 
 shazan = Filme('shazan 2', 2023, 160)
 shazan.dar_like()
-print(f'Nome: {shazan.nome} / Ano de lançamento: {shazan.ano} / duração: {shazan.duracao} / likes: {shazan.likes}')
-
-print('\n')
-
 greys = Serie('grays anatomy', 2004, 19)
 greys.dar_like()
-print(f'Nome: {greys.nome} / Ano de lançamento: {greys.ano} / temporadas: {greys.temporada} / likes: {greys.likes}')
+greys.dar_like()
+elite = Serie('Elite', 2018, 4)
+elite.dar_like()
+filmes_series = [shazan, greys, elite]
+
+for programa in filmes_series:
+    print(programa)

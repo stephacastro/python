@@ -42,16 +42,41 @@ class Serie(Programa):
 
     def __str__(self):
         return f'{self._nome} / {self.ano} / {self.temporada} temporadas / {self._likes} likes'
-       
+
+class Playlist:
+    def __init__(self, nome, programa):
+       self.nome = nome
+       self._programa = programa
+
+    def __getitem__(self, item):
+        return self._programa[item]
+
+    @property
+    def listagem(self):
+        return self._programa
+    
+    @property
+    def tamanho(self):
+        return len(self._programa)
 
 shazan = Filme('shazan 2', 2023, 160)
-shazan.dar_like()
 greys = Serie('grays anatomy', 2004, 19)
-greys.dar_like()
-greys.dar_like()
 elite = Serie('Elite', 2018, 4)
-elite.dar_like()
-filmes_series = [shazan, greys, elite]
+vingadores = Filme('vingadores - guerra infinita', 2018, 160)
 
-for programa in filmes_series:
+shazan.dar_like()
+greys.dar_like()
+greys.dar_like()
+elite.dar_like()
+vingadores.dar_like()
+elite.dar_like()
+
+filmes_series = [shazan, greys, elite, vingadores]
+
+playlist_fds = Playlist('Fim de semana', filmes_series)
+
+print(f'Tamanho do playlist: {len(playlist_fds.listagem)}')
+
+for programa in playlist_fds:
     print(programa)
+

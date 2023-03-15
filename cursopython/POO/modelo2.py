@@ -48,7 +48,7 @@ class Playlist:
        self.nome = nome
        self._programa = programa
 
-    def __getitem__(self, item):
+    def __getitem__(self, item): # getitem é um método iteravel
         return self._programa[item]
 
     @property
@@ -58,6 +58,10 @@ class Playlist:
     @property
     def tamanho(self):
         return len(self._programa)
+    
+    @property
+    def __len__(self):
+        return len(self._playlist_fds)
 
 shazan = Filme('shazan 2', 2023, 160)
 greys = Serie('grays anatomy', 2004, 19)
@@ -75,7 +79,7 @@ filmes_series = [shazan, greys, elite, vingadores]
 
 playlist_fds = Playlist('Fim de semana', filmes_series)
 
-print(f'Tamanho do playlist: {len(playlist_fds.listagem)}')
+print(f'Tamanho do playlist: {playlist_fds}')
 
 for programa in playlist_fds:
     print(programa)

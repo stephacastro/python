@@ -1,3 +1,6 @@
+# getter -> Obter valor
+# setter -> 
+
 
 class Caneta:
     def __init__(self, cor):

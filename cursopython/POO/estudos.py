@@ -1,14 +1,20 @@
 # getter -> Obter valor
-# setter -> 
-
+# setter -> configura o valor
 
 class Caneta:
     def __init__(self, cor):
-        self.cor = cor
+        self._cor = cor
 
     @property
     def cor(self):
-        return self.cor_tinta
+        return self._cor
+
+    @cor.setter
+    def cor(self, valor):
+        self._cor = valor
+
     
 caneta = Caneta('Azul')
+caneta.cor = 'Vermelha'
+
 print(caneta.cor)

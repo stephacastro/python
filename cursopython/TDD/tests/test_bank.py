@@ -1,4 +1,4 @@
-from bank import Funcionario
+from codigo import Funcionario
 import pytest
 from pytest import mark
 
@@ -59,4 +59,3 @@ class TestClass:
             resultado = calcular.calcular_bonus() # when
 
             assert resultado # then
-        

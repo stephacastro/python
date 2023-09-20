@@ -1,0 +1,6 @@
+
+
+
+muitiprocessos - utilizar em processos que exigem muito recurso de cpu, processamento em geral 
+
+Programação assincrona - é indicada utilizar em tarefas que fazem leitura de dados, banco de dados, acessando api e etc...

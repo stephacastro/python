@@ -1,0 +1,7 @@
+######################### AULA 01 #########################
+
+aula bem introdutório a linguagem, falamos sobre tipos aritiméticos 
+booleanos
+funções built-in 
+variaveis e etc...
+Tudo bem básico, meu conhecimento já esta bem sólido nesssas questões. 
